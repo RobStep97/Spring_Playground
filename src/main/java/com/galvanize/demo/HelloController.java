@@ -1,11 +1,13 @@
 package com.galvanize.demo;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 
 
 @RestController
+@RequestMapping("/math")
 public class HelloController {
 
     @GetMapping("/" )
@@ -13,10 +15,10 @@ public class HelloController {
         return "Hello World!";
     }
 
-    @GetMapping("/a")
+    @GetMapping("/pi")
     public String helloWorld2() {
-        return "Hello World Again!";
+        return "3.141592653589793";
     }
-    @GetMapping("/cats")
+
 
 }
